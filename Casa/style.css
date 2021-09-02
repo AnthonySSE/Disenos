@@ -1,0 +1,304 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.casa
+{
+    position: relative;
+    width: 700px;
+    height: 350px;
+    background-color: #ccc;
+    border-bottom: 8px solid green;
+}
+
+.main
+{
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 200px;
+    background-color: white;
+}
+
+.main::before
+{
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 10px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.techo
+{
+    position: absolute;
+    top: -100px;
+    height: 100px;
+    width: 100%;
+
+}
+
+.techo::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background:darkcyan;
+    transform: skewX(330deg);
+}
+
+.techo::after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background:darkcyan;
+    transform: skewX(30deg);
+}
+
+.frente
+{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 180px;
+    background: whitesmoke;
+}
+
+.frente::before
+{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -64px;
+    width: 126px;
+    height: 126px;
+    background: whitesmoke;
+    transform: translateX(-50%) rotate(45deg);
+    border-top: 4px solid black;
+    border-left: 4px solid black;
+}
+
+.frente::after
+{
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 60px;
+    background: rgb(44, 44, 44);
+    background-image: linear-gradient(to right, transparent 10%, transparent 90%, rgb(44,44,44) 90%),
+    linear-gradient(to bottom, transparent 10%, rgba(0, 153, 255, 0.671) 10%, rgb(145,145,145) 90%);
+    background-size: 10px 15px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border: 4px solid rgb(44, 44, 44);
+}
+
+.puerta
+{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 80px;
+    background: darkred;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+}
+
+.puerta::before
+{
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: -45px;
+    width: 30px;
+    height: 30px;
+    background: rgb(44, 44, 44);
+    background-image: linear-gradient(to right, transparent 10%, transparent 90%, rgb(44,44,44) 90%),
+    linear-gradient(to bottom, transparent 10%, rgba(0, 153, 255, 0.3) 10%, rgb(145,145,145) 90%);
+    background-size: 10px 10px;
+    border: 2px solid rgb(44, 44, 44);
+    border-top: 5px solid rgb(44, 44, 44);
+    border-bottom: 5px solid rgb(44, 44, 44);
+}
+
+.puerta::after
+{
+    content: "";
+    position: absolute;
+    top: 30px;
+    right: -45px;
+    width: 30px;
+    height: 30px;
+    background: rgb(44, 44, 44);
+    background-image: linear-gradient(to right, transparent 10%, transparent 90%, rgb(44,44,44) 90%),
+    linear-gradient(to bottom, transparent 10%, rgba(0, 153, 255, 0.3) 10%, rgb(145,145,145) 90%);
+    background-size: 10px 10px;
+    border: 2px solid rgb(44, 44, 44);
+    border-top: 5px solid rgb(44, 44, 44);
+    border-bottom: 5px solid rgb(44, 44, 44);
+}
+
+.linea
+{
+    position: absolute;
+    top:38%;
+    width: 100%;
+    height: 12px;
+    border-top: 4px solid red;
+    border-bottom: 4px solid red;
+}
+
+.ventana_derecha
+{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 60px;
+    height: 50px;
+    background:rgb(44, 44, 44);
+    background-image: linear-gradient(to right, transparent 10%, transparent 90%, rgb(44,44,44) 90%),
+    linear-gradient(to bottom, transparent 10%, rgba(0, 153, 255, 0.671) 10%, rgb(145,145,145) 90%);
+    background-size: 10px 10px;
+    border: 2px solid rgb(44, 44, 44);
+    border-top: 5px solid rgb(44, 44, 44);
+    border-bottom: 5px solid rgb(44, 44, 44);
+}
+
+.ventana_derecha::before
+{
+    content: "";
+    position: absolute;
+    margin-left: 5px;
+    top: 90px;
+    width: 40px;
+    height: 45px;
+    background:rgb(44, 44, 44);
+    background-image: linear-gradient(to right, transparent 10%, transparent 90%, rgb(44,44,44) 90%),
+    linear-gradient(to bottom, transparent 10%, rgba(0, 153, 255, 0.3) 10%, rgb(145,145,145) 90%);
+    background-size: 10px 10px;
+    border: 2px solid rgb(44, 44, 44);
+    border-top: 5px solid rgb(44, 44, 44);
+    border-bottom: 5px solid rgb(44, 44, 44);
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+}
+
+.ventana_izquierda
+{
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    width: 60px;
+    height: 50px;
+    background:rgb(44, 44, 44);
+    background-image: linear-gradient(to right, transparent 10%, transparent 90%, rgb(44,44,44) 90%),
+    linear-gradient(to bottom, transparent 10%, rgba(0, 153, 255, 0.671) 10%, rgb(145,145,145) 90%);
+    background-size: 10px 10px;
+    border: 2px solid rgb(44, 44, 44);
+    border-top: 5px solid rgb(44, 44, 44);
+    border-bottom: 5px solid rgb(44, 44, 44);
+}
+
+.ventana_izquierda::before
+{
+    content: "";
+    position: absolute;
+    margin-left: 5px;
+    top: 90px;
+    width: 40px;
+    height: 45px;
+    background:rgb(44, 44, 44);
+    background-image: linear-gradient(to right, transparent 10%, transparent 90%, rgb(44,44,44) 90%),
+    linear-gradient(to bottom, transparent 10%, rgba(0, 153, 255, 0.3) 10%, rgb(145,145,145) 90%);
+    background-size: 10px 10px;
+    border: 2px solid rgb(44, 44, 44);
+    border-top: 5px solid rgb(44, 44, 44);
+    border-bottom: 5px solid rgb(44, 44, 44);
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+}
+
+.garaje
+{
+    position: absolute;
+    bottom: 0;
+    left: -120px;
+    width: 140px;
+    height: 140px;
+    background: whitesmoke;
+}
+
+.garaje::before
+{
+    content: "";
+    position: absolute;
+    top: -52px;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background: whitesmoke;
+    transform: translateX(-50%) rotate(45deg);
+    border-top: 4px solid black;
+    border-left: 4px solid black;
+}
+
+.garaje::after
+{
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 70px;
+    transform: translateX(-35px);
+    height: 40px;
+    background: rgb(44, 44, 44);
+    background-image: linear-gradient(to right, transparent 10%, transparent 90%, rgb(44,44,44) 90%),
+    linear-gradient(to bottom, transparent 10%, rgba(0, 153, 255, 0.671) 10%, rgb(145,145,145) 90%);
+    background-size: 10px 15px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border: 2px solid rgb(44, 44, 44);
+}
+
+.puerta_garaje
+{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 70px;
+    background: darkred;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+}
