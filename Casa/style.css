@@ -302,3 +302,53 @@ body
     border-top-left-radius: 60px;
     border-top-right-radius: 60px;
 }
+
+.arbol
+{
+    position: absolute;
+    right: -120px;
+    top: -10px;
+    width: 120px;
+    height: 120px;
+    background: greenyellow;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    transform: rotate(315deg);
+}
+
+.arbol::before
+{
+    content:"";
+    position:absolute;
+    top: 85px;
+    left: -20px;
+    width: 10px;
+    height: 100px;
+    background: brown;
+    transform: rotate(45deg);
+}
+
+.arbol2
+{
+    position: absolute;
+    right: -120px;
+    top: 60px;
+    width: 60px;
+    height: 60px;
+    background: rgb(19, 83, 19);
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    transform: rotate(315deg) scale(1.25);
+}
+
+.arbol2::before
+{
+    content:"";
+    position:absolute;
+    top: 40px;
+    left: -15px;
+    width: 5px;
+    height: 65px;
+    background: brown;
+    transform: rotate(45deg);
+}
