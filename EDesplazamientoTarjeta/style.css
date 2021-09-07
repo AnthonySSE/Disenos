@@ -1,29 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 *
 {
- font-family: 'Montserrat', sans-serif;
- margin: 0;
+ font-family: 'Montserrat', sans-serif; /*Font general para las tarjetas.*/
+ margin: 0; /*Margin y padding en 0 para que CSS no los asigne automaticamente.*/
  padding: 0;
- box-sizing: border-box;
+ box-sizing: border-box; /*Para añadir dentro todos los elementos de la caja dentro del calculo del tamaño de la mimsa*/
 }
 body
 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: rgb(16, 0, 59);
+    display: flex; /*Para poder utilizar las propiedades flexbox en el objeto*/
+    justify-content: center; /*Centrar contenido del objeto*/
+    align-items: center; /*Alinear objetos*/
+    min-height: 100vh; /*Tamaño minimo del objeto*/
+    background-color: rgb(16, 0, 59); /*Color de fondo del objeto*/
 }
 body::before
 {
     content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    position: absolute; /*Para mantener el posicionamiento del objeto absoluto.*/
+    top: 0; /*Abajo*/
+    left: 0; /*A la derecha*/
+    width: 100%; /*Para formar un circulo se utilizan porcentajes iguales para alto y ancho en los elementos.*/
     height: 100%;
-    background: linear-gradient(red,black);
-    clip-path: circle(30% at right 70%);
+    background: linear-gradient(red,black); /*Colores del objeto*/
+    clip-path: circle(30% at right 70%); /*30% - 70% en rojo, el resto en negro.*/
 }
 body::after
 {
@@ -38,13 +38,13 @@ body::after
 }
 .contenedor
 {
-    position: relative;
-    display: flex;
+    position: relative; /*Para mantener la posición relativa entre los objetos.*/
+    display: flex; 
     justify-content: center;
     align-items: center;
-    max-width: 1200px;
-    flex-wrap: wrap;
-    z-index: 1;
+    max-width: 1200px; /*Ancho maximo del contenedor.*/
+    flex-wrap: wrap; /*El contenido se adapta al ancho para que no salga*/
+    z-index: 1; /*Indice de la clase en la pagina.*/
 }
 .contenedor .tarjeta
 {
@@ -52,18 +52,66 @@ body::after
     width: 280px;
     height: 400px;
     margin: 30px;
-    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
-    background: rgba(255, 255, 255, 0.1);
-    overflow: hidden;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5); /*Sombra de la caja*/
+    border-radius: 15px; /*Radio de los bordes*/
+    background: rgba(255, 255, 255, 0.1); /*Color de fondo*/
+    overflow: hidden; /*Overflow oculto, no mostrará los scroll.*/
     display: flex;
     justify-content: center;
     align-items: center;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     border-left: 1px solid rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px); /*Permite aplicar efectos gráficos como el desenfoque o cambio de color al área detrás de un elemento.*/
 }
 .contenedor .tarjeta .contenido
 {
-    
+    padding: 20px;
+    text-align: center;
+    transition: 0.5s; /*Tiempo de trancisión de la animación de la transformación del objeto.*/
+    transform: translateY(100px); /*"Mueve" al objeto verticalmente.*/
+    opacity: 0; /*Sin opacidad*/
+    transition: 0.5s; /*Se pueden tener 2 transition property en un mismo objeto.*/
+}
+
+.contenedor .tarjeta:hover .contenido
+{
+    transform: translateY(0); /*Lo retorna a donde pertenece.*/
+    opacity: 1; /*Lo vuelve visible*/
+}
+
+.contenedor .tarjeta .contenido h2
+{
+    position: absolute; 
+    top: -40px;
+    right: 30px;
+    font-size: 8em;
+    color: rgba(255, 255, 255, 0.05);
+    pointer-events: none; /*Eventos al pasar el puntero.*/
+}
+
+.contenedor .tarjeta .contenido h3
+{
+    font-size: 1.8em;
+    color: white;
+    z-index: 1;
+}
+
+.contenedor .tarjeta .contenido p
+{
+    font-size: 1em;
+    color: white;
+    font-weight: 300;
+}
+
+.contenedor .tarjeta .contenido a
+{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 15px;
+    background: white;
+    color: black;
+    border-radius: 20px;
+    text-decoration: none; /*Decoración en el texto.*/
+    font-weight: 500;
 }
