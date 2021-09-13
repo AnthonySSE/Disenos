@@ -1,0 +1,43 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+section
+{
+    background-color: black;
+    height: 100vh;
+    overflow: hidden;
+}
+section p
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 24px;
+    letter-spacing: 1px;
+    line-height: 1em;
+    background-clip: text;
+    background-color: black;
+    background: url(gildi.jpg);
+    color: #FFDB58;
+    text-shadow: red 1px -1px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    text-align: justify;
+    filter: grayscale(90%);
+}
+
+#bg
+{
+position: absolute;
+top: 0;
+right: 0;
+width: 100%;
+height: 100%;
+background: url(Gildi2.JPG);
+background-size: contain;
+background-color: white;
+background-repeat: no-repeat;
+background-position-x: center;
+}
