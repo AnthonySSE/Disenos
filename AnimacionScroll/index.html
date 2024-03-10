@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animación de Scroll</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="layer">
+        <img src="https://static.vecteezy.com/system/resources/previews/019/906/486/non_2x/plane-graphic-clipart-design-free-png.png" width="75%" class="plane">
+    </div>
+    <section></section>
+    <div class="text">
+        <h2>Bienvenido a <br><span>República Dominicana</span></h2>
+    </div>
+    <section class="sec2"></section>
+
+    <script>
+        let layer = document.querySelector('.layer');
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            layer.style.left = value+'px';
+        })
+    </script>
+</body>
+</html>
